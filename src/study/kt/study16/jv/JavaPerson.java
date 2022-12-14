@@ -1,4 +1,4 @@
-package study.kt.study16;
+package study.kt.study16.jv;
 
 public class JavaPerson {
 

@@ -1,5 +1,10 @@
 package study.kt.study16
 
+import study.kt.study16.jv.JavaPerson
+import study.kt.study16.kt.Srt
+import study.kt.study16.kt.Train
+import study.kt.study16.kt.isExpensive
+
 fun main() {
     /*
         확장함수
@@ -29,6 +34,21 @@ fun main() {
     val person = JavaPerson("황", 100)
     println("==============================")
     println("nextYearAge ${person.nextYearAge()}")
+    println("==============================")
+
+    /*
+        ** 확장함수가 Override 된다면?
+        - 해당 변수의 현재 타입을 기준으로 확장함수의 호출여부가 결정된다.
+     */
+    println("==============================")
+    val train: Train = Train()
+    train.isExpensive() // Train.isExpensive 호출
+    println("==============================")
+    val srt1: Train = Srt()
+    srt1.isExpensive() // Train.isExpensive 호출
+    println("==============================")
+    val srt2: Srt = Srt()
+    srt2.isExpensive() // Srt.isExpensive 호출
     println("==============================")
 
 }
